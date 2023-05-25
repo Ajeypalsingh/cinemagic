@@ -15,7 +15,8 @@ function Catalog() {
 
         const getAvengers = async () => {
             const response = await axios.get(API_URl_one);
-            setAvengers(response.data.Search)
+            setAvengers(response.data.Search);
+            console.log(response.data.Search)
         }
         const getAnime = async () => {
             const response = await axios.get(API_URl_two);
@@ -26,7 +27,6 @@ function Catalog() {
         getAnime();
 
     }, []);
-    console.log(avengers)
     return (
         <main>
             <div className='container'>

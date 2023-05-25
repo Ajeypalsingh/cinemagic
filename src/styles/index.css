@@ -351,21 +351,48 @@ form .button:disabled {
 
 .detail {
   height: 350px;
-  width: 750px;
-  background-color: #00a86b;
+  width: 900px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .detail figure {
-  width: 100%;
+  width: 35%;
   height: 100%;
-  background-color: #1414ff;
+  justify-content: center;
+  display: flex;
+}
+
+.detail figure img {
+  height: 350px;
+  border-radius: 5px;
+  box-shadow: 0 0.5px 8px rgba(255, 255, 255, 0.3);
+
 }
 
 .detail-content {
-  width: 100%;
+  width: 65%;
   height: 100%;
-  background-color: #ff2846;
+  color: #fff;
 }
+
+
+.detail-content .title {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+
+.detail-content p + p {
+  margin-top: 15px;
+}
+
+span {
+  font-size: 20px;
+}
+
+.detail-content p {
+  font-size: 20px;
+  font-weight: 60;
+}
+
