@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/cinemagic/static/css/main.c492cd0a.css",
-    "main.js": "/cinemagic/static/js/main.a6b6278b.js",
+    "main.js": "/cinemagic/static/js/main.b9d19786.js",
     "static/media/ghost-img.png": "/cinemagic/static/media/ghost-img.cbedbdd72a5c40e33a18.png",
     "index.html": "/cinemagic/index.html",
     "main.c492cd0a.css.map": "/cinemagic/static/css/main.c492cd0a.css.map",
-    "main.a6b6278b.js.map": "/cinemagic/static/js/main.a6b6278b.js.map"
+    "main.b9d19786.js.map": "/cinemagic/static/js/main.b9d19786.js.map"
   },
   "entrypoints": [
     "static/css/main.c492cd0a.css",
-    "static/js/main.a6b6278b.js"
+    "static/js/main.b9d19786.js"
   ]
 }
