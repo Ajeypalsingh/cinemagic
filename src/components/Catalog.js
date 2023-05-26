@@ -53,7 +53,7 @@ function Catalog() {
             <div className='container'>
                 <div className='catalog-avenger'>
                     <div className='catalog-header'>
-                        <h2>Start streaming now....</h2>
+                        <h2>Streaming now....</h2>
                         <button onClick={sortmovies} className='sort'>Sort Movies</button>
                     </div>
                     <div className='grid'>
