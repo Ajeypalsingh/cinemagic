@@ -1,8 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 function Catalog() {
+const navigate  = useNavigate();
 
     const [avengers, setAvengers] = useState([]);
     const [anime, setAnime] = useState([]);
@@ -16,7 +19,7 @@ function Catalog() {
         const getAvengers = async () => {
             const response = await axios.get(API_URl_one);
             setAvengers(response.data.Search);
-            console.log(response.data.Search)
+            console.log(response.data.Search);
         }
         const getAnime = async () => {
             const response = await axios.get(API_URl_two);
@@ -27,18 +30,28 @@ function Catalog() {
         getAnime();
 
     }, []);
+
+        
+    const openDescription = (id) => {
+        navigate(`/movie/${id}`)
+    };
+
     return (
-        <main>
+       
+        <main className='catalog-main'>
+        <Helmet>
+        <title>Movies Catalog</title>
+      </Helmet>
             <div className='container'>
                 <div className='catalog-avenger'>
                     <div className='catalog-header'>
-                        <h2>Avenger movies....</h2>
+                        <h2>Start streaming now....</h2>
                         <button className='sort'>Sort Movies</button>
                     </div>
                     <div className='grid'>
                         <div class="grid-container">
                             {avengers.map(movies =>
-                                <div class="grid-item">
+                                <div onClick={()=>openDescription(movies.imdbID)} class="grid-item">
                                     <figure>
                                         <img src={`${movies.Poster}`} alt='image-poster' />
                                     </figure>
@@ -49,7 +62,7 @@ function Catalog() {
                             )}
 
                             {anime.map(movies =>
-                                <div class="grid-item">
+                                <div onClick={()=>openDescription(movies.imdbID)} class="grid-item">
                                     <figure>
                                         <img src={`${movies.Poster}`} alt='image-poster' />
                                     </figure>
@@ -64,6 +77,7 @@ function Catalog() {
 
             </div>
         </main>
+       
     )
 }
 

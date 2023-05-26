@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
     return (
@@ -18,8 +19,8 @@ function Header() {
 
                 <nav>
                     <ul>
-                        <li><a href='/'>Add Movie</a></li>
-                        <li><a href='/'>Explore</a></li>
+                        <li><NavLink className={navData => (navData.isActive ? "active" : "")} to="/cinemagic">Home</NavLink></li>
+                        <li><NavLink className={navData => (navData.isActive ? "active" : "")} to="/new">Add Movie</NavLink></li>
                     </ul>
                 </nav>
 

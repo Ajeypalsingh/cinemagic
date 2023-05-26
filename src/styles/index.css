@@ -25,6 +25,10 @@ body {
   position: relative;
 }
 
+.catalog-main {
+  margin:  35px;
+}
+
 header {
   background-color: var(--app-blue);
   height: 60px;
@@ -126,6 +130,10 @@ nav a:hover:before {
   width: 100%;
 }
 
+.active {
+  border-bottom: 2px solid #fff;
+}
+
 .bar-icon {
   display: none;
 }
@@ -134,7 +142,6 @@ footer {
   height: 60px;
   background-color: var(--app-blue);
   line-height: 60px;
-  margin-top: 20px;
 }
 
 .query,
@@ -152,6 +159,7 @@ footer {
 .grid-item {
   height: 330px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .grid-item figure img {
@@ -189,13 +197,13 @@ footer {
 }
 
 .not-found {
-  height: 100vh;
+  height: calc(100vh - 60px - 60px);
   display: grid;
   place-items: center;
   background: linear-gradient(-45deg, #5f748b, #1c2130, #1c2748);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
 }
 
 @keyframes gradient {
@@ -215,16 +223,16 @@ footer {
   animation: floaty 1.8s infinite alternate;
 }
 
-@keyframes floaty{
-  0%{
-      transform: translateY(0);
+@keyframes floaty {
+  0% {
+    transform: translateY(0);
   }
-  100%{
-      transform: translateY(15px);
+  100% {
+    transform: translateY(15px);
   }
 }
 
-.shadow{
+.shadow {
   width: 250px;
   height: 30px;
   background-color: rgba(187, 189, 202, 0.16);
@@ -233,7 +241,6 @@ footer {
   filter: blur(7px);
   animation: floaty 1.8s infinite alternate;
 }
-
 
 .ghost-flex {
   display: flex;
@@ -277,7 +284,7 @@ footer {
 }
 
 .form-container {
-  height: 100vh;
+  height: calc(100vh - 60px - 60px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -288,7 +295,6 @@ form {
   width: 450px;
   padding: 15px 10px;
   border-radius: 5px;
-
 }
 
 form h2 {
@@ -307,7 +313,8 @@ form .inputs {
   margin-bottom: 18px;
 }
 
-form input[type=text], input[type=number] {
+form input[type="text"],
+input[type="number"] {
   border: 1px solid rgba(0, 0, 0, 0.5);
   background: none;
   height: 40px;
@@ -317,9 +324,9 @@ form input[type=text], input[type=number] {
   border-radius: 5px;
 }
 
-form input[type=text]:focus, input[type=number]:focus {
-  border: 1px solid rgb(0 0 0 );
-
+form input[type="text"]:focus,
+input[type="number"]:focus {
+  border: 1px solid rgb(0 0 0);
 }
 
 form .button {
@@ -337,14 +344,13 @@ form .button {
   cursor: pointer;
 }
 
-
 form .button:disabled {
   background-color: #6666ea;
   cursor: not-allowed;
 }
 
 .detail-main {
-  height: 100vh;
+  height: calc(100vh - 60px - 60px);
   display: grid;
   place-items: center;
 }
@@ -367,7 +373,6 @@ form .button:disabled {
   height: 350px;
   border-radius: 5px;
   box-shadow: 0 0.5px 8px rgba(255, 255, 255, 0.3);
-
 }
 
 .detail-content {
@@ -376,12 +381,10 @@ form .button:disabled {
   color: #fff;
 }
 
-
 .detail-content .title {
   font-size: 40px;
   font-weight: 800;
 }
-
 
 .detail-content p + p {
   margin-top: 15px;
@@ -395,4 +398,3 @@ span {
   font-size: 20px;
   font-weight: 60;
 }
-

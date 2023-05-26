@@ -1,9 +1,11 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { Helmet } from 'react-helmet';
 
 
 function NewMovie() {
 
+    
     const { register, handleSubmit, formState: { errors, isValid }, reset } = useForm({ mode: 'onChange',});
 
     const onSubmit = (data) => {
@@ -14,6 +16,9 @@ function NewMovie() {
 
   return (
     <div className='form-container'>
+         <Helmet>
+        <title>Add Movie</title>
+      </Helmet>
          <form onSubmit={handleSubmit(onSubmit)}>
                         <h2>Add Movies</h2>
                         <div className='form-content'>

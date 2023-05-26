@@ -3,18 +3,28 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import NotFound from './components/NotFound';
 import NewMovie from './components/NewMovie';
-import './styles/index.css';
 import Detail from './components/Detail';
+import { Routes, Route } from 'react-router-dom';
+import './styles/index.css';
 
 function App() {
   return (
     <>
-      <Header />
+      {/* <Header />
       <Catalog />
       <NewMovie />
       <NotFound />
       <Detail />
-      <Footer />
+      <Footer /> */}
+
+  <Header />
+  <Routes>
+    <Route exact path='/cinemagic' element={<Catalog />} />
+    <Route exact path='/new' element={<NewMovie />} />
+    <Route exact path='*' element={<NotFound />} />
+    <Route exact path='/movie/:detail' element={<Detail />} />
+  </Routes>
+  <Footer />
 
       
     </>
