@@ -20,7 +20,8 @@ function Header() {
                 <nav>
                     <ul>
                         <li><NavLink className={navData => (navData.isActive ? "active" : "")} to="/cinemagic">Home</NavLink></li>
-                        <li><NavLink className={navData => (navData.isActive ? "active" : "")} to="/new">Add Movie</NavLink></li>
+                        <li><NavLink className={navData => (navData.isActive ? "active" : "")} to="/new">Add</NavLink></li>
+                        <li><NavLink className={navData => (navData.isActive ? "active" : "")} to="/fsj">About</NavLink></li>
                     </ul>
                 </nav>
 
