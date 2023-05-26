@@ -17,16 +17,16 @@ function App() {
       <Detail />
       <Footer /> */}
 
-  <Header />
-  <Routes>
-    <Route exact path='/cinemagic' element={<Catalog />} />
-    <Route exact path='/new' element={<NewMovie />} />
-    <Route exact path='*' element={<NotFound />} />
-    <Route exact path='/movie/:detail' element={<Detail />} />
-  </Routes>
-  <Footer />
+      <Header />
+      <Routes>
+        <Route exact path='/cinemagic' element={<Catalog />} />
+        <Route exact path='/new' element={<NewMovie />} />
+        <Route exact path='/movie/:detail' element={<Detail />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
+      <Footer />
 
-      
+
     </>
   )
 }
