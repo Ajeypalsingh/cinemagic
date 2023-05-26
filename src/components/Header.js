@@ -25,7 +25,7 @@ function Header() {
                 </nav>
 
                 <div className='bar-icon'>
-                <i class="fa-solid fa-bars"></i>
+                <i className="fa-solid fa-bars"></i>
                 </div>
             </div>
         </header>

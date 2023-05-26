@@ -15,7 +15,6 @@ function Detail() {
             setMovie(response.data)
         }
         getDetail()
-        console.log(movie)
     }, [])
 
 
@@ -30,10 +29,10 @@ function Detail() {
                 </figure>
                 <div className='detail-content'>
                     <p className='title'>{`${movie.Title}`}</p>
-                    <p className='release'><span>Released In</span>- {`${movie.Released}`} </p>
-                    <p className='duration'><span>Duration</span> - {`${movie.Runtime}`}</p>
-                    <p className='language'><span>Language</span> - {`${movie.Language}`}</p>
-                    <p className='description'> <span>Description</span> - {`${movie.Plot}`}</p>
+                    <p className='release'>Released In - {`${movie.Released}`} </p>
+                    <p className='duration'>Duration - {`${movie.Runtime}`}</p>
+                    <p className='language'>Language - {`${movie.Language}`}</p>
+                    <p className='description'>Description - {`${movie.Plot}`}</p>
 
                 </div>
             </div>
