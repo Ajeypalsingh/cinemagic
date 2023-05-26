@@ -13,8 +13,8 @@ const navigate  = useNavigate();
 
     useEffect(() => {
         const API_KEY = 'f51bf1dc';
-        const API_URl_one = `http://www.omdbapi.com/?s=avengers&apikey=f51bf1dc`;
-        const API_URl_two = `http://www.omdbapi.com/?s=anime&apikey=f51bf1dc`;
+        const API_URl_one = `https://www.omdbapi.com/?s=avengers&apikey=f51bf1dc`;
+        const API_URl_two = `https://www.omdbapi.com/?s=anime&apikey=f51bf1dc`;
 
         const getAvengers = async () => {
             const response = await axios.get(API_URl_one);
