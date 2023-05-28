@@ -4,8 +4,12 @@
 
 API used - The open Movie Database (omDb)
 
-const API_URl_one = `https://www.omdbapi.com/?s=avengers&apikey=${API_KEY}`; <br>
-const API_URl_two = `https://www.omdbapi.com/?s=harry&apikey=${API_KEY}`;
+For Catalog
+const API_URl = `https://www.omdbapi.com/?s={movie-keyword}s&apikey={API_KEY}`; <br>
+
+For Detail
+const API_URL = `https://www.omdbapi.com/?i={id}&apikey={API_KEY}`
+
 
 Click [here](https://ajeypalsingh.github.io/cinemagic/) to get Movies Info.
 

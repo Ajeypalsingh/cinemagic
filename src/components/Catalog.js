@@ -9,6 +9,7 @@ function Catalog() {
     const [movies, setMovies] = useState([]);
     const [avengers, setAvengers] = useState([]);
     const [harry, setHarry] = useState([]);
+    const [sortmovies, setSortMovies] = useState([]);
     const [sort, setSort] = useState(false);
     const API_KEY = 'f51bf1dc';
 
@@ -39,9 +40,10 @@ function Catalog() {
         navigate(`/movie/${id}`)
     };
 
-    const sortmovies = () => {
-        const sortedMovies = movies.sort((a, b) => a.Title.localeCompare(b.Title));
-        setSort(true);
+    const moviesCopy = movies.map(el => el);
+    const sortMovies = () => {
+        const sortedMovies = moviesCopy.sort((a, b) => a.Title.localeCompare(b.Title));
+        setSortMovies(sortedMovies);
     }
 
     return (
@@ -54,7 +56,7 @@ function Catalog() {
                 <div className='catalog-avenger'>
                     <div className='catalog-header'>
                         <h2>Streaming now....</h2>
-                        <button onClick={sortmovies} className='sort'>Sort Movies</button>
+                        <button onClick={sortMovies} className='sort'>Sort Movies</button>
                     </div>
                     <div className='grid'>
                         <div className="grid-container">
